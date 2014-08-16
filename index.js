@@ -9,7 +9,7 @@ module.exports = function(file, start, end, cb) {
   var buffer = new Buffer(length);
   // open a file in 'read' mode
   fs.open(file, 'r', function(err, fd) {
-    if (err){
+    if (err) {
       cb(err);
       return;
     }
@@ -24,6 +24,7 @@ module.exports = function(file, start, end, cb) {
       if (bufferLength < length) {
         buffer = buffer.toString('utf-8', 0, bufferLength);
       }
+
       fs.close(fd, function() {
         // return proper hash to callback
         cb(null, buffer);
