@@ -1,16 +1,16 @@
-# part-file by [@michalbe](http://github.com/michalbe) #
+# read-part-file by [@michalbe](http://github.com/michalbe) #
 Get just part of the file in easy way
 
 ### How to use: ###
 ```
-npm install part-file
+npm install read-part-file
 ```
 then:
 ```javascript
-var pf = require('part-file');
+var rpf = require('read-part-file');
 
 // Arguments are: filename, first byte, number of bytes, callback
-pf('./LICENSE', 0, 15, function(err, result) {
+rpf('./LICENSE', 0, 15, function(err, result) {
   console.log(result); // First 15 bytes of the file: 'The MIT License'
 });
 ```
