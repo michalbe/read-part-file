@@ -20,3 +20,8 @@ pf(pathToTestFile, 50, 10, function(err, data) {
 pf(pathToTestFile, 0, 1024 * 1024, function(err, data) {
   assert.equal(data.toString().length, 1095);
 });
+
+// File doesn't exists
+pf('hwdp.jczc', 1024*1024, 100, function(err, data) {
+  assert(err.message.indexOf('ENOENT') > -1);
+});
