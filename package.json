@@ -1,8 +1,8 @@
 {
-  "name": "part-file",
-  "version": "0.0.1",
+  "name": "read-part-file",
+  "version": "1.0.0",
   "author": "Michał Budzyński <michal@virtualdesign.pl>",
-  "repository": "git@github.com:michalbe/part-file.git",
+  "repository": "git@github.com:michalbe/read-part-file.git",
   "devDependencies": {
     "assert": "^1.1.1",
     "jshint": "^2.5.3",
