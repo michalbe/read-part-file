@@ -2,9 +2,7 @@
 
 var fs = require('fs');
 
-module.exports = function(file, start, end, cb) {
-  // calculate length of the chunk
-  var length = end - start;
+module.exports = function(file, start, length, cb) {
   // create new buffer to write chunk to
   var buffer = new Buffer(length);
   // open a file in 'read' mode
@@ -14,7 +12,7 @@ module.exports = function(file, start, end, cb) {
       return;
     }
     // read given number of bytes and write to the buffer
-    fs.read(fd, buffer, 0, length, 0, function(err, bufferLength) {
+    fs.read(fd, buffer, 0, length, start, function(err, bufferLength) {
       if (err){
         cb(err);
         return;
